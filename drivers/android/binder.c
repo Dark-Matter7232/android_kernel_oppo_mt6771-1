@@ -2121,8 +2121,8 @@ static void binder_free_transaction(struct binder_transaction *t)
 {
 	struct binder_proc *target_proc;
 
-	spin_lock(&t->lock);
 	target_proc = t->to_proc;
+	spin_lock(&t->lock);
 	if (target_proc) {
 		atomic_inc(&target_proc->tmp_ref);
 		spin_unlock(&t->lock);
