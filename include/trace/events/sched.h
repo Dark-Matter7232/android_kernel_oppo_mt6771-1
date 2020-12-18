@@ -2156,8 +2156,7 @@ TRACE_EVENT(sched_task_util,
 		__entry->stune_boosted)
 )
 
-#include "sched_enhance.h"
-
+#endif /* CONFIG_SCHED_WALT */
 #endif /* _TRACE_SCHED_H */
 
 /* This part must be outside protection */
